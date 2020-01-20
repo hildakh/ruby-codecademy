@@ -10,18 +10,18 @@ choice = gets.chomp.downcase
 
 case choice
 when "add"
-puts "What movie would you like to add?"
-title = gets.chomp
-puts "What's the rating of this movie?"
-rating = gets.chomp
-movies[title] = rating
-puts "A new movie was added to the collection!"
+  puts "What movie would you like to add? "
+  title = gets.chomp.to_sym
+  puts "What rating does the movie have? "
+  rating = gets.chomp.to_i
+  movies[title] = rating
+  puts "A new movie was added to the collection!"
 when "update"
-puts "Updated!"
+  puts "Updated!"
 when "display"
-puts "Movies!"
+  puts "Movies!"
 when "delete"
-puts "Deleted!"
+  puts "Deleted!"
 else
-puts "Error!"
+  puts "Error!"
 end
